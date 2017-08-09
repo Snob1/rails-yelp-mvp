@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# for restaurants and reviews seeds
+gem 'faker'
 # for lewagon program
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'

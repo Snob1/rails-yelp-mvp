@@ -1,0 +1,15 @@
+<h1>You can see reviews of restaurants in this page!</h1>
+<%= link_to "new!", new_restaurant_path %>
+<%  @restaurants.each do |restaurant| %>
+  <h2>Restaurant:<%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+  <p>address:<%= restaurant.address %></p>
+  <p>category:<%= restaurant.category %></p>
+  <p>call:<%= restaurant.phone_number %></p>
+  <hr>
+  <% @reviews.where(restaurant_id: restaurant.id).each do |review| %>
+   <p>Review:<%= review.content %></p>
+    <p>Star: <%= review.rating %></p>
+  <% end %>
+  <hr>
+
+<% end %>
